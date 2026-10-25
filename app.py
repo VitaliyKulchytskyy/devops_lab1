@@ -1,5 +1,3 @@
-import datetime
-
 from flask import Flask, jsonify
 
 from main import greet
