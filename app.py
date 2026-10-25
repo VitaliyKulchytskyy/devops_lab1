@@ -1,8 +1,11 @@
+import datetime
+
 from flask import Flask, jsonify
 
 from main import greet
 
 app = Flask(__name__)
+VERSION = "1.1.0"
 
 PAGE = """<!doctype html>
 <html lang="uk">
@@ -26,6 +29,11 @@ def index():
 @app.route("/health")
 def health():
     return jsonify(status="ok")
+
+
+@app.route("/version")
+def version():
+    return jsonify(version=VERSION)
 
 
 if __name__ == "__main__":
