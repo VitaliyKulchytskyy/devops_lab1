@@ -13,3 +13,6 @@ node_modules/
 # IDE
 .vscode/
 .idea/
+
+# Build output
+site/
